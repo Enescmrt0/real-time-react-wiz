@@ -68,9 +68,9 @@ const Services = () => {
         {/* Header */}
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-accent font-bold text-foreground mb-6">
-            Our Proven <span className="text-secondary">4-Step Process</span>
+            Our Proven <span className="text-accent">4-Step Process</span>
           </h2>
-          <p className="text-xl text-muted-foreground font-body max-w-3xl mx-auto">
+          <p className="text-xl text-muted font-body max-w-3xl mx-auto">
             A systematic approach to transform your business operations with measurable AI solutions
           </p>
         </div>
@@ -80,7 +80,7 @@ const Services = () => {
           {services.map((service, index) => (
             <Card 
               key={index}
-              className="p-8 hover:shadow-elegant transition-all duration-500 hover:scale-[1.02] group animate-fade-in"
+              className="p-8 hover:shadow-glow transition-all duration-500 hover:scale-[1.02] group animate-fade-in bg-card border-border shadow-card"
               style={{ animationDelay: `${index * 200}ms` }}
             >
               <div className="flex items-start space-x-6">
@@ -95,13 +95,13 @@ const Services = () => {
                     <h3 className="text-2xl font-accent font-semibold text-foreground mb-2">
                       {service.name}
                     </h3>
-                    <p className="text-muted-foreground font-body leading-relaxed">
+                    <p className="text-muted font-body leading-relaxed">
                       {service.description}
                     </p>
                   </div>
 
                   {/* Outcome */}
-                  <div className="flex items-center space-x-2 p-3 bg-muted rounded-lg">
+                  <div className="flex items-center space-x-2 p-3 bg-background rounded-lg">
                     <CheckCircle className="h-5 w-5 text-accent flex-shrink-0" />
                     <span className="font-body font-medium text-foreground">
                       {service.outcome}
@@ -113,7 +113,7 @@ const Services = () => {
                     <h4 className="font-body font-semibold text-foreground">Key Deliverables:</h4>
                     <ul className="space-y-1">
                       {service.deliverables.map((deliverable, idx) => (
-                        <li key={idx} className="flex items-center space-x-2 text-muted-foreground font-body text-sm">
+                        <li key={idx} className="flex items-center space-x-2 text-muted font-body text-sm">
                           <div className="w-1.5 h-1.5 bg-accent rounded-full flex-shrink-0" />
                           <span>{deliverable}</span>
                         </li>
@@ -146,7 +146,7 @@ const Services = () => {
                   <div className="font-accent font-semibold text-foreground mb-1">
                     Week {index + 1}-{index + 2}
                   </div>
-                  <div className="text-sm text-muted-foreground font-body">
+                  <div className="text-sm text-muted font-body">
                     {service.name}
                   </div>
                 </div>

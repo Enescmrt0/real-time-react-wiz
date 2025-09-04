@@ -83,14 +83,14 @@ const Products = () => {
   ];
 
   return (
-    <section id="products" className="py-24 bg-gradient-subtle">
+    <section id="products" className="py-24 bg-card">
       <div className="container mx-auto px-4 lg:px-6">
         {/* Header */}
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-accent font-bold text-foreground mb-6">
-            Powerful Tools for <span className="text-secondary">Measurable Results</span>
+            Powerful Tools for <span className="text-accent">Measurable Results</span>
           </h2>
-          <p className="text-xl text-muted-foreground font-body max-w-3xl mx-auto">
+          <p className="text-xl text-muted font-body max-w-3xl mx-auto">
             Comprehensive suite of AI-powered tools designed to deliver clear, data-backed business improvements
           </p>
         </div>
@@ -100,7 +100,7 @@ const Products = () => {
           {products.map((product, index) => (
             <Card 
               key={index}
-              className="group p-8 hover:shadow-elegant transition-all duration-500 hover:scale-[1.02] animate-fade-in relative overflow-hidden"
+              className="group p-8 hover:shadow-glow transition-all duration-500 hover:scale-[1.02] animate-fade-in relative overflow-hidden bg-background border-border shadow-card"
               style={{ animationDelay: `${index * 150}ms` }}
             >
               {/* Background Gradient */}
@@ -119,10 +119,10 @@ const Products = () => {
 
                 {/* Content */}
                 <div>
-                  <h3 className="text-xl font-accent font-semibold text-foreground mb-3 group-hover:text-primary transition-colors">
+                  <h3 className="text-xl font-accent font-semibold text-foreground mb-3 group-hover:text-accent transition-colors">
                     {product.name}
                   </h3>
-                  <p className="text-muted-foreground font-body leading-relaxed mb-4">
+                  <p className="text-muted font-body leading-relaxed mb-4">
                     {product.description}
                   </p>
                 </div>
@@ -135,7 +135,7 @@ const Products = () => {
                   </h4>
                   <ul className="space-y-2">
                     {product.features.map((feature, idx) => (
-                      <li key={idx} className="flex items-start space-x-3 text-muted-foreground font-body text-sm">
+                      <li key={idx} className="flex items-start space-x-3 text-muted font-body text-sm">
                         <div className="w-1.5 h-1.5 bg-accent rounded-full mt-2 flex-shrink-0" />
                         <span>{feature}</span>
                       </li>
@@ -148,7 +148,7 @@ const Products = () => {
                   <Button 
                     variant="ghost" 
                     size="sm" 
-                    className="group/btn w-full justify-between hover:bg-primary/5"
+                    className="group/btn w-full justify-between hover:bg-accent/10"
                   >
                     Learn More
                     <ExternalLink className="h-4 w-4 group-hover/btn:translate-x-1 transition-transform" />
@@ -160,7 +160,7 @@ const Products = () => {
         </div>
 
         {/* Integration Note */}
-        <div className="bg-card border border-border rounded-2xl p-8 text-center shadow-elegant">
+        <div className="bg-background border border-border rounded-2xl p-8 text-center shadow-card">
           <div className="flex items-center justify-center mb-6">
             <div className="bg-gradient-primary p-4 rounded-full">
               <Cog className="h-8 w-8 text-white animate-spin" style={{ animationDuration: '3s' }} />
@@ -169,7 +169,7 @@ const Products = () => {
           <h3 className="text-2xl font-accent font-semibold text-foreground mb-4">
             Seamlessly Integrated Ecosystem
           </h3>
-          <p className="text-muted-foreground font-body mb-6 max-w-2xl mx-auto">
+          <p className="text-muted font-body mb-6 max-w-2xl mx-auto">
             All tools work together as a comprehensive solution, ensuring smooth data flow and consistent results across your entire business transformation journey.
           </p>
           <Button variant="success" size="lg" className="shadow-glow">

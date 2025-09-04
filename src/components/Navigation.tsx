@@ -15,17 +15,17 @@ const Navigation = () => {
   ];
 
   return (
-    <nav className="sticky top-0 z-50 bg-background/95 backdrop-blur-lg border-b border-border shadow-elegant">
+    <nav className="sticky top-0 z-50 bg-navigation/95 backdrop-blur-lg border-b border-border shadow-navigation">
       <div className="container mx-auto px-4 lg:px-6">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <div className="flex items-center space-x-3">
             <div className="relative">
-              <Brain className="h-8 w-8 text-secondary animate-pulse-glow" />
+              <Brain className="h-8 w-8 text-accent animate-pulse-glow" />
               <div className="absolute inset-0 bg-gradient-primary opacity-20 blur-lg rounded-full animate-pulse" />
             </div>
-            <span className="text-2xl font-accent font-bold text-foreground">
-              Thessa
+            <span className="text-2xl font-logo font-bold text-navigation-foreground">
+              THESSA
             </span>
           </div>
 
@@ -35,9 +35,10 @@ const Navigation = () => {
               <a
                 key={item.name}
                 href={item.href}
-                className="text-muted-foreground hover:text-foreground transition-colors font-body font-medium"
+                className="text-muted hover:text-foreground transition-colors font-body font-medium relative group"
               >
                 {item.name}
+                <span className="absolute inset-x-0 -bottom-1 h-0.5 bg-accent scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></span>
               </a>
             ))}
           </div>
@@ -64,13 +65,13 @@ const Navigation = () => {
 
         {/* Mobile Menu */}
         {isMenuOpen && (
-          <div className="md:hidden border-t border-border bg-background/95 backdrop-blur-lg">
+          <div className="md:hidden border-t border-border bg-navigation/95 backdrop-blur-lg">
             <div className="px-2 pt-2 pb-3 space-y-1">
               {menuItems.map((item) => (
                 <a
                   key={item.name}
                   href={item.href}
-                  className="block px-3 py-2 text-muted-foreground hover:text-foreground transition-colors font-body"
+                  className="block px-3 py-2 text-muted hover:text-foreground hover:bg-accent/10 rounded-md transition-colors font-body"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {item.name}

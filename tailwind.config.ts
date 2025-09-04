@@ -21,22 +21,35 @@ export default {
 			colors: {
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
+				'input-border': 'hsl(var(--input-border))',
 				ring: 'hsl(var(--ring))',
 				background: 'hsl(var(--background))',
 				foreground: 'hsl(var(--foreground))',
 				primary: {
 					DEFAULT: 'hsl(var(--primary))',
 					foreground: 'hsl(var(--primary-foreground))',
-					glow: 'hsl(var(--primary-glow))'
+					hover: 'hsl(var(--primary-hover))'
 				},
 				secondary: {
 					DEFAULT: 'hsl(var(--secondary))',
-					foreground: 'hsl(var(--secondary-foreground))'
+					foreground: 'hsl(var(--secondary-foreground))',
+					hover: 'hsl(var(--secondary-hover))'
+				},
+				navigation: {
+					DEFAULT: 'hsl(var(--navigation))',
+					foreground: 'hsl(var(--navigation-foreground))'
+				},
+				header: {
+					DEFAULT: 'hsl(var(--header))',
+					foreground: 'hsl(var(--header-foreground))'
 				},
 				destructive: {
 					DEFAULT: 'hsl(var(--destructive))',
 					foreground: 'hsl(var(--destructive-foreground))'
 				},
+				success: 'hsl(var(--success))',
+				warning: 'hsl(var(--warning))',
+				info: 'hsl(var(--info))',
 				muted: {
 					DEFAULT: 'hsl(var(--muted))',
 					foreground: 'hsl(var(--muted-foreground))'
@@ -44,10 +57,6 @@ export default {
 				accent: {
 					DEFAULT: 'hsl(var(--accent))',
 					foreground: 'hsl(var(--accent-foreground))'
-				},
-				warm: {
-					DEFAULT: 'hsl(var(--warm))',
-					foreground: 'hsl(var(--warm-foreground))'
 				},
 				popover: {
 					DEFAULT: 'hsl(var(--popover))',
@@ -59,9 +68,10 @@ export default {
 				}
 			},
 			fontFamily: {
-				sans: ['Inter', 'system-ui', 'sans-serif'],
-				body: ['Open Sans', 'system-ui', 'sans-serif'], 
+				sans: ['Inter', 'Helvetica Neue', 'system-ui', 'sans-serif'],
+				body: ['Inter', 'Segoe UI', 'system-ui', 'sans-serif'], 
 				accent: ['Poppins', 'system-ui', 'sans-serif'],
+				logo: ['Futura', 'Trebuchet MS', 'Arial Black', 'Helvetica Neue', 'Arial', 'sans-serif'],
 				mono: ['JetBrains Mono', 'Courier New', 'monospace']
 			},
 			backgroundImage: {
@@ -72,7 +82,8 @@ export default {
 			boxShadow: {
 				'elegant': 'var(--shadow-elegant)',
 				'glow': 'var(--shadow-glow)',
-				'warm': 'var(--shadow-warm)'
+				'card': 'var(--shadow-card)',
+				'navigation': 'var(--shadow-navigation)'
 			},
 			transitionTimingFunction: {
 				'smooth': 'cubic-bezier(0.4, 0, 0.2, 1)',
